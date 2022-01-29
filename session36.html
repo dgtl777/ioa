@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(yellow,orange);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="score">Score: 0</h1>
+        <h1>Quiz App</h1>
+    </header>
+    <h3>1. When was the Rubik's cube invented?</h3>
+    <label for="">1. 1974</label>
+    <input type="radio" name="cube" id="" value="1974">
+    <label for="">2. 1964</label>
+    <input type="radio" name="cube" id="" value="1964">
+    <label for="">3. 1954</label>
+    <input type="radio" name="cube" id="" value="1954">
+    <label for="">4. 1946</label>
+    <input type="radio" name="cube" id="" value="1946">
+    <h3>2. What are the black keys called at the right side of the piano?</h3>
+    <label for="">1. Shark</label>
+    <input type="radio" name="key" id="" value="shark">
+    <label for="">2. Sharp</label>
+    <input type="radio" name="key" id="" value="sharp">
+    <label for="">3. Tarp</label>
+    <input type="radio" name="key" id="" value="tarp">
+    <label for="">4. Carp</label>
+    <input type="radio" name="key" id="" value="carp">
+    <h3>3. Who is the current president of America?</h3>
+    <label for="">Bill Gates</label>
+    <input type="radio" name="president" id="" value="bill">
+    <label for="">Dwayne Jonson</label>
+    <input type="radio" name="president" id="" value="dwayne">
+    <label for="">Barrack Obama</label>
+    <input type="radio" name="president" id="" value="obama">
+    <label for="">Joe Biden</label>
+    <input type="radio" name="president" id="" value="joe">
+    <h3>4. What is the white house?</h3>
+    <label for="">Presidents House</label>
+    <input type="radio" name="house" id="" value="president">
+    <label for="">My House</label>
+    <input type="radio" name="house" id="" value="my">
+    <label for="">Your House</label>
+    <input type="radio" name="house" id="" value="your">
+    <label for="">The Neighbours House</label>
+    <input type="radio" name="house" id="" value="neighbour">
+    <h3>5. How much horse power does the Lamborghini Aventador have?</h3>
+    <label for="">676</label>
+    <input type="radio" name="aventador" id="" value="676">
+    <label for="">544</label>
+    <input type="radio" name="aventador" id="" value="544">
+    <label for="">888</label>
+    <input type="radio" name="aventador" id="" value="888">
+    <label for="">678</label>
+    <input type="radio" name="aventador" id="" value="678"><br><br>
+    <button onclick="check()">Submit Answer</button>
+    
+</body>
+<script>
+    var score  = 0;
+    function check(){
+        var cube = document.
+        querySelector('input[name="cube"]:checked').
+        value;
+        if(cube == "1974"){
+            score = score + 1;
+        }
+        var key  = document.
+        querySelector('input[name="key"]:checked').
+        value;
+        if(key == "sharp"){
+            score = score + 1;
+        }
+        var president  = document.
+        querySelector('input[name="president"]:checked').
+        value;
+        if(president == "joe"){
+            score = score + 1;
+        }
+        var house  = document.
+        querySelector('input[name="house"]:checked').
+        value;
+        if(house == "president"){
+            score = score + 1;
+        }
+        var aventador = document.
+        querySelector('input[name="aventador"]:checked').
+        value;
+        if(aventador == "544"){
+            score = score + 1;
+        }
+        document.getElementById("score").innerText = 
+        "Score: "+score;
+    }
+</script>
+</html>
